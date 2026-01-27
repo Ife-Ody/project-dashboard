@@ -53,7 +53,7 @@ export function AppSidebar() {
   const getHrefForNavItem = (id: NavItemId): string => {
     if (id === "my-tasks") return "/tasks"
     if (id === "projects") return "/"
-    if (id === "inbox") return "/" // placeholder
+    if (id === "inbox") return "/inbox"
     if (id === "clients") return "/clients"
     return "#"
   }
@@ -66,7 +66,7 @@ export function AppSidebar() {
       return pathname.startsWith("/tasks")
     }
     if (id === "inbox") {
-      return false
+      return pathname.startsWith("/inbox")
     }
     if (id === "clients") {
       return pathname.startsWith("/clients")
